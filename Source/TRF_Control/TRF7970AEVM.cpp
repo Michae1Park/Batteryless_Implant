@@ -4,6 +4,8 @@
 HANDLE hndlCOM;
 DCB dcbMasterInitState;
 #else
+#include <iostream>
+#include <errno.h>
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
@@ -50,6 +52,7 @@ bool InitSerial() {
 #else
 	USB = open("/dev/ttyUSB0", O_RDWR | O_NOCTTY);
 	if (USB < 0) {
+		std::cout << "Error no: " << errno << ", description: " << strerror(errno) << std::endl;
 		return false;
 	}
 
