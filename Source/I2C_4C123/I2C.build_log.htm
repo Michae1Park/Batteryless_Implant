@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\MichaelPark\Desktop\SeniorDesign\Source\I2C_4C123\I2C.uvproj
+Project File Date:  08/21/2016
+
+<h2>Output:</h2>
+Rebuild target 'I2C'
+assembling startup.s...
+compiling I2CTestMain.c...
+I2CTestMain.c(182): warning:  #177-D: variable "rawData" was declared but never referenced
+    unsigned short rawData = 0;             // 16-bit data straight from thermometer
+I2CTestMain.c(183): warning:  #177-D: variable "tempInt" was declared but never referenced
+    int tempInt = 0;                        // integer value of temperature (-128 to 127)
+I2CTestMain.c(184): warning:  #177-D: variable "tempFra" was declared but never referenced
+    int tempFra = 0;                        // fractional value of temperature (0 to 9375)
+I2CTestMain.c: 3 warnings, 0 errors
+compiling I2C0.c...
+compiling PLL.c...
+compiling UART.c...
+linking...
+Program Size: Code=1620 RO-data=16 RW-data=0 ZI-data=1120  
+".\I2C.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Users\\MichaelPark\\Desktop\\SeniorDesign\\Source\\I2C_4C123\\I2C.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+</pre>
+</body>
+</html>
