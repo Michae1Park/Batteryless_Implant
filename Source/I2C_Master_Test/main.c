@@ -8,6 +8,9 @@
 #define SDA	BIT0
 #define SCL BIT1
 
+
+
+
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
    // P1DIR |= 0x1;
@@ -37,18 +40,22 @@ int main(void) {
 
         unsigned short x = 0;
         while(1){
+        UCB0TBCNT = 0x0001;   			//THIS IS HOW MANY BYTES EXPECTED FROM SLAVE
+        UCB0CTL1  &= ~UCSWRST;           // put eUSCI out of reset
         UCB0CTL1 |= UCTXSTT + UCTR;		// start i2c write operation
         while(!(UCB0IFG & UCTXIFG0));
         UCB0TXBUF = x;
         while(!(UCB0IFG & UCBCNTIFG)); 	// wait until the stop counter
 
-        	UCB0CTL1 &= ~UCTR; 				// read operation
-        	UCB0CTL1 |= UCTXSTT; 			// repeated start
-        	while(!(UCB0IFG & UCRXIFG0));	// wait until read data available
-        	x = UCB0RXBUF;
-        	// UCB0CTL1 |= UCTXSTP;
+        UCB0CTL1 &= ~UCTR; 				// read operation
+        UCB0CTL1 |= UCTXSTT; 			// repeated start
+        while(!(UCB0IFG & UCRXIFG0));	// wait until read data available
+        x = UCB0RXBUF;
+        	//UCB0CTL1 |= UCTXSTP;
+        	//while (!(UCB0IFG & UCSTPIFG));   // wait until it has been received
+        UCB0CTL1  |= UCSWRST;            // put the eUSCI into reset mode
 
-        int i = 10000;					// SW Delay
+        volatile int i = 20000;					// SW Delay
         		do i--;
         		while(i != 0);
         }
