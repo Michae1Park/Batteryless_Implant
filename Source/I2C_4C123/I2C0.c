@@ -58,7 +58,7 @@ void I2C_Init(void){
   //I2C0_MTPR_R = 24;              // 8) configure for 100 kbps clock
   // 20*(TPR+1)*20ns = 10us, with TPR=24
 		
-		I2C0_SCSR_R = 0x1;
+	I2C0_SCSR_R = 0x1;	//enable slave operation
 	//I2C0_SDR_R  = 0xF0; //random data
 }
 

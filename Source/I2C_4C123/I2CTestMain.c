@@ -188,28 +188,16 @@ int main(void){
   I2C_Init();
 	
 	int count =0;
-	while(count <1000){
-		while(!(I2C0_SCSR_R & 0x1 )){UART_OutUDec(count);UART_OutString("\r\n");} //checking command from implant
-		int data = I2C0_SDR_R;
-//		UART_OutString("received: ");
-//		UART_OutUHex(data);
-//		UART_OutString("\n\r");
+	while(1){
+		while(!(I2C0_SCSR_R & 0x1 )){}//UART_OutUDec(count);UART_OutString("\r\n");} //checking command from implant
+		int data = I2C0_SDR_R; //read data received from master
+		UART_OutString("received: ");
+		UART_OutUHex(data);
+		UART_OutString("\n\r");
 		
-		//return incremented data
-		I2C0_SDR_R = (data+ 1);
-		count++;
-//		while(I2C0_SCSR_R & 0x2){}	//wait until the transmit is done
-//	  I2C0_SDR_R = (data+ 1);
-//need to send two bytes
-//		I2C0_SDR_R = 0x55; //random data			
-//		while(I2C0_SCSR_R & 0x2){}	//wait until the transmit is done
-//		I2C0_SDR_R = 0x55; //random data
-		
-//		I2C0_SCSR_R |= 0x2; //transmit
-//		I2C0_SCSR_R &= 0xFD;
-		
+		while(!(I2C0_SCSR_R & 0x2)){} //need to acknowledge the read command from the master before sending data back
+		I2C0_SDR_R = (data+ 1); 		//return incremented data
 	}
-	UART_OutUHex(I2C0_SDR_R);
 	
 //test display and number parser (can safely be skipped)
 #if DEBUGPRINTS
