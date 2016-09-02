@@ -196,7 +196,9 @@ int main(void){
 		UART_OutString("\n\r");
 		
 		while(!(I2C0_SCSR_R & 0x2)){} //need to acknowledge the read command from the master before sending data back
-		I2C0_SDR_R = (data+ 1); 		//return incremented data
+		if (data == 0x0C) I2C0_SDR_R = (0xCF); 		//return incremented data
+		else if (data == 0x2C) I2C0_SDR_R = (0xAC);
+		else I2C0_SDR_R = (0xDD);
 	}
 	
 //test display and number parser (can safely be skipped)
