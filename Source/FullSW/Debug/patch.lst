@@ -1,0 +1,730 @@
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    1
+
+       1            ;******************************************************************************
+       2            ;* MSP430 C/C++ Codegen                                       PC v15.12.3.LTS *
+       3            ;* Date/Time created: Wed Nov 02 14:59:54 2016                                *
+       4            ;******************************************************************************
+       5                    .compiler_opts --abi=eabi --diag_wrap=off --hll_source=on --mem_model:code=small --mem_model:d
+       6            
+       7            $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       8                    .dwattr $C$DW$CU, DW_AT_name("../patch.c")
+       9                    .dwattr $C$DW$CU, DW_AT_producer("TI MSP430 C/C++ Codegen PC v15.12.3.LTS Copyright (c) 2003-2
+      10                    .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      11                    .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\Michael\Desktop\SeniorDesign\Source\FullSW\Debug")
+      12                    .bound  ".TI.bound:BlockLockROMAddress", 65478, 0
+      13                    .bound  ".TI.bound:BlockLockROMID", 65480, 0
+      14                    .bound  ".TI.bound:CustomCommandAddress", 65482, 0
+      15                    .bound  ".TI.bound:CustomCommandID", 65484, 0
+      16                    .bound  ".TI.bound:END_KEY", 65472, 0
+      17                    .bound  ".TI.bound:ErrataFunctionAddress", 65474, 0
+      18                    .bound  ".TI.bound:Errata_ID", 65476, 0
+      19                    .bound  ".TI.bound:Firmware_System_Control_Byte", 63591, 0
+      20                    .bound  ".TI.bound:START_KEY", 65486, 0
+      21            
+      22            $C$DW$1 .dwtag  DW_TAG_subprogram
+      23                    .dwattr $C$DW$1, DW_AT_name("userCustomCommand")
+      24                    .dwattr $C$DW$1, DW_AT_TI_symbol_name("userCustomCommand")
+      25                    .dwattr $C$DW$1, DW_AT_declaration
+      26                    .dwattr $C$DW$1, DW_AT_external
+      27                    .dwattr $C$DW$1, DW_AT_decl_file("..\patch.h")
+      28                    .dwattr $C$DW$1, DW_AT_decl_line(0x2c)
+      29                    .dwattr $C$DW$1, DW_AT_decl_column(0x06)
+      30                    .dwendtag $C$DW$1
+      31            
+      32                    .global Firmware_System_Control_Byte
+      33 000000               .sect   ".TI.bound:Firmware_System_Control_Byte"
+      34                    .retain
+      35                    .align  1
+      36                    .elfsym Firmware_System_Control_Byte,SYM_SIZE(1)
+      37 000000       Firmware_System_Control_Byte:
+      38 000000 00C6          .bits   198,8                   ; Firmware_System_Control_Byte @ 0
+      39            
+      40            $C$DW$2 .dwtag  DW_TAG_variable
+      41                    .dwattr $C$DW$2, DW_AT_name("Firmware_System_Control_Byte")
+      42                    .dwattr $C$DW$2, DW_AT_TI_symbol_name("Firmware_System_Control_Byte")
+      43                    .dwattr $C$DW$2, DW_AT_location[DW_OP_addr Firmware_System_Control_Byte]
+      44                    .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$29)
+      45                    .dwattr $C$DW$2, DW_AT_external
+      46                    .dwattr $C$DW$2, DW_AT_decl_file("../patch.c")
+      47                    .dwattr $C$DW$2, DW_AT_decl_line(0x44)
+      48                    .dwattr $C$DW$2, DW_AT_decl_column(0x16)
+      49            
+      50                    .global START_KEY
+      51 000000               .sect   ".TI.bound:START_KEY"
+      52                    .retain
+      53                    .align  2
+      54                    .elfsym START_KEY,SYM_SIZE(2)
+      55 000000       START_KEY:
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    2
+
+      56 000000 CECE          .bits   52942,16                        ; START_KEY @ 0
+      57            
+      58            $C$DW$3 .dwtag  DW_TAG_variable
+      59                    .dwattr $C$DW$3, DW_AT_name("START_KEY")
+      60                    .dwattr $C$DW$3, DW_AT_TI_symbol_name("START_KEY")
+      61                    .dwattr $C$DW$3, DW_AT_location[DW_OP_addr START_KEY]
+      62                    .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$34)
+      63                    .dwattr $C$DW$3, DW_AT_external
+      64                    .dwattr $C$DW$3, DW_AT_decl_file("../patch.c")
+      65                    .dwattr $C$DW$3, DW_AT_decl_line(0x70)
+      66                    .dwattr $C$DW$3, DW_AT_decl_column(0x0d)
+      67            
+      68                    .global CustomCommandID
+      69 000000               .sect   ".TI.bound:CustomCommandID"
+      70                    .retain
+      71                    .align  2
+      72                    .elfsym CustomCommandID,SYM_SIZE(2)
+      73 000000       CustomCommandID:
+      74 000000 00AA          .bits   170,16                  ; CustomCommandID @ 0
+      75            
+      76            $C$DW$4 .dwtag  DW_TAG_variable
+      77                    .dwattr $C$DW$4, DW_AT_name("CustomCommandID")
+      78                    .dwattr $C$DW$4, DW_AT_TI_symbol_name("CustomCommandID")
+      79                    .dwattr $C$DW$4, DW_AT_location[DW_OP_addr CustomCommandID]
+      80                    .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$34)
+      81                    .dwattr $C$DW$4, DW_AT_external
+      82                    .dwattr $C$DW$4, DW_AT_decl_file("../patch.c")
+      83                    .dwattr $C$DW$4, DW_AT_decl_line(0x74)
+      84                    .dwattr $C$DW$4, DW_AT_decl_column(0x0e)
+      85            
+      86                    .global CustomCommandAddress
+      87 000000               .sect   ".TI.bound:CustomCommandAddress"
+      88                    .retain
+      89                    .align  2
+      90                    .elfsym CustomCommandAddress,SYM_SIZE(2)
+      91 000000       CustomCommandAddress:
+      92 000000 0000!         .bits   userCustomCommand,16            ; CustomCommandAddress @ 0
+      93            
+      94            $C$DW$5 .dwtag  DW_TAG_variable
+      95                    .dwattr $C$DW$5, DW_AT_name("CustomCommandAddress")
+      96                    .dwattr $C$DW$5, DW_AT_TI_symbol_name("CustomCommandAddress")
+      97                    .dwattr $C$DW$5, DW_AT_location[DW_OP_addr CustomCommandAddress]
+      98                    .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$25)
+      99                    .dwattr $C$DW$5, DW_AT_external
+     100                    .dwattr $C$DW$5, DW_AT_decl_file("../patch.c")
+     101                    .dwattr $C$DW$5, DW_AT_decl_line(0x78)
+     102                    .dwattr $C$DW$5, DW_AT_decl_column(0x16)
+     103            
+     104                    .global BlockLockROMID
+     105 000000               .sect   ".TI.bound:BlockLockROMID"
+     106                    .retain
+     107                    .align  2
+     108                    .elfsym BlockLockROMID,SYM_SIZE(2)
+     109 000000       BlockLockROMID:
+     110 000000 2600          .bits   9728,16                 ; BlockLockROMID @ 0
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    3
+
+     111            
+     112            $C$DW$6 .dwtag  DW_TAG_variable
+     113                    .dwattr $C$DW$6, DW_AT_name("BlockLockROMID")
+     114                    .dwattr $C$DW$6, DW_AT_TI_symbol_name("BlockLockROMID")
+     115                    .dwattr $C$DW$6, DW_AT_location[DW_OP_addr BlockLockROMID]
+     116                    .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$34)
+     117                    .dwattr $C$DW$6, DW_AT_external
+     118                    .dwattr $C$DW$6, DW_AT_decl_file("../patch.c")
+     119                    .dwattr $C$DW$6, DW_AT_decl_line(0x7d)
+     120                    .dwattr $C$DW$6, DW_AT_decl_column(0x0e)
+     121            
+     122                    .global BlockLockROMAddress
+     123 000000               .sect   ".TI.bound:BlockLockROMAddress"
+     124                    .retain
+     125                    .align  2
+     126                    .elfsym BlockLockROMAddress,SYM_SIZE(2)
+     127 000000       BlockLockROMAddress:
+     128 000000 0000!         .bits   BlockLockROM_Patched,16         ; BlockLockROMAddress @ 0
+     129            
+     130            $C$DW$7 .dwtag  DW_TAG_variable
+     131                    .dwattr $C$DW$7, DW_AT_name("BlockLockROMAddress")
+     132                    .dwattr $C$DW$7, DW_AT_TI_symbol_name("BlockLockROMAddress")
+     133                    .dwattr $C$DW$7, DW_AT_location[DW_OP_addr BlockLockROMAddress]
+     134                    .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$25)
+     135                    .dwattr $C$DW$7, DW_AT_external
+     136                    .dwattr $C$DW$7, DW_AT_decl_file("../patch.c")
+     137                    .dwattr $C$DW$7, DW_AT_decl_line(0x81)
+     138                    .dwattr $C$DW$7, DW_AT_decl_column(0x16)
+     139            
+     140                    .global Errata_ID
+     141 000000               .sect   ".TI.bound:Errata_ID"
+     142                    .retain
+     143                    .align  2
+     144                    .elfsym Errata_ID,SYM_SIZE(2)
+     145 000000       Errata_ID:
+     146 000000 1600          .bits   5632,16                 ; Errata_ID @ 0
+     147            
+     148            $C$DW$8 .dwtag  DW_TAG_variable
+     149                    .dwattr $C$DW$8, DW_AT_name("Errata_ID")
+     150                    .dwattr $C$DW$8, DW_AT_TI_symbol_name("Errata_ID")
+     151                    .dwattr $C$DW$8, DW_AT_location[DW_OP_addr Errata_ID]
+     152                    .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$34)
+     153                    .dwattr $C$DW$8, DW_AT_external
+     154                    .dwattr $C$DW$8, DW_AT_decl_file("../patch.c")
+     155                    .dwattr $C$DW$8, DW_AT_decl_line(0x86)
+     156                    .dwattr $C$DW$8, DW_AT_decl_column(0x0e)
+     157            
+     158                    .global ErrataFunctionAddress
+     159 000000               .sect   ".TI.bound:ErrataFunctionAddress"
+     160                    .retain
+     161                    .align  2
+     162                    .elfsym ErrataFunctionAddress,SYM_SIZE(2)
+     163 000000       ErrataFunctionAddress:
+     164 000000 0000!         .bits   ErrataFix,16            ; ErrataFunctionAddress @ 0
+     165            
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    4
+
+     166            $C$DW$9 .dwtag  DW_TAG_variable
+     167                    .dwattr $C$DW$9, DW_AT_name("ErrataFunctionAddress")
+     168                    .dwattr $C$DW$9, DW_AT_TI_symbol_name("ErrataFunctionAddress")
+     169                    .dwattr $C$DW$9, DW_AT_location[DW_OP_addr ErrataFunctionAddress]
+     170                    .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$25)
+     171                    .dwattr $C$DW$9, DW_AT_external
+     172                    .dwattr $C$DW$9, DW_AT_decl_file("../patch.c")
+     173                    .dwattr $C$DW$9, DW_AT_decl_line(0x8a)
+     174                    .dwattr $C$DW$9, DW_AT_decl_column(0x16)
+     175            
+     176                    .global END_KEY
+     177 000000               .sect   ".TI.bound:END_KEY"
+     178                    .retain
+     179                    .align  2
+     180                    .elfsym END_KEY,SYM_SIZE(2)
+     181 000000       END_KEY:
+     182 000000 CECE          .bits   52942,16                        ; END_KEY @ 0
+     183            
+     184            $C$DW$10        .dwtag  DW_TAG_variable
+     185                    .dwattr $C$DW$10, DW_AT_name("END_KEY")
+     186                    .dwattr $C$DW$10, DW_AT_TI_symbol_name("END_KEY")
+     187                    .dwattr $C$DW$10, DW_AT_location[DW_OP_addr END_KEY]
+     188                    .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$34)
+     189                    .dwattr $C$DW$10, DW_AT_external
+     190                    .dwattr $C$DW$10, DW_AT_decl_file("../patch.c")
+     191                    .dwattr $C$DW$10, DW_AT_decl_line(0x8e)
+     192                    .dwattr $C$DW$10, DW_AT_decl_column(0x0d)
+     193            
+     194            ;       C:\ti\ccsv6\tools\compiler\msp430_15.12.3.LTS\bin\opt430.exe C:\\Users\\Michael\\AppData\\Loca
+     195 000000               .sect   ".fram_driver_code:ErrataFix"
+     196                    .retain
+     197                    .global ErrataFix
+     198            
+     199            $C$DW$11        .dwtag  DW_TAG_subprogram
+     200                    .dwattr $C$DW$11, DW_AT_name("ErrataFix")
+     201                    .dwattr $C$DW$11, DW_AT_low_pc(ErrataFix)
+     202                    .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     203                    .dwattr $C$DW$11, DW_AT_TI_symbol_name("ErrataFix")
+     204                    .dwattr $C$DW$11, DW_AT_external
+     205                    .dwattr $C$DW$11, DW_AT_TI_begin_file("../patch.c")
+     206                    .dwattr $C$DW$11, DW_AT_TI_begin_line(0xa1)
+     207                    .dwattr $C$DW$11, DW_AT_TI_begin_column(0x06)
+     208                    .dwattr $C$DW$11, DW_AT_decl_file("../patch.c")
+     209                    .dwattr $C$DW$11, DW_AT_decl_line(0xa1)
+     210                    .dwattr $C$DW$11, DW_AT_decl_column(0x06)
+     211                    .dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x02)
+     212                    .dwpsn  file "../patch.c",line 162,column 1,is_stmt,address ErrataFix,isa 0
+     213            
+     214                    .dwfde $C$DW$CIE, ErrataFix
+     215            
+     216            ;*****************************************************************************
+     217            ;* FUNCTION NAME: ErrataFix                                                  *
+     218            ;*                                                                           *
+     219            ;*   Regs Modified     : SP                                                  *
+     220            ;*   Regs Used         : SP                                                  *
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    5
+
+     221            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     222            ;*****************************************************************************
+     223 000000       ErrataFix:
+     224            ;* --------------------------------------------------------------------------*
+     225                    .dwcfi  cfa_offset, 2
+     226                    .dwcfi  save_reg_to_mem, 16, -2
+     227                    .dwpsn  file "../patch.c",line 163,column 2,is_stmt,isa 0
+     228 000000 40F2   MOV.B #0x3F, &0x1C01 
+         000002 003F 
+         000004 1C01 
+     229                    .dwpsn  file "../patch.c",line 164,column 2,is_stmt,isa 0
+     230 000006 12B0   CALL #0x51F4 
+         000008 51F4 
+     231                    .dwpsn  file "../patch.c",line 165,column 1,is_stmt,isa 0
+     232            $C$DW$12        .dwtag  DW_TAG_TI_branch
+     233                    .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     234                    .dwattr $C$DW$12, DW_AT_TI_return
+     235            
+     236 00000a 4130          RET       ; [] 
+     237                    ; [] 
+     238                    .dwattr $C$DW$11, DW_AT_TI_end_file("../patch.c")
+     239                    .dwattr $C$DW$11, DW_AT_TI_end_line(0xa5)
+     240                    .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     241                    .dwendentry
+     242                    .dwendtag $C$DW$11
+     243            
+     244 000000               .sect   ".fram_driver_code:BlockLockROM_Patched"
+     245                    .retain
+     246                    .global BlockLockROM_Patched
+     247            
+     248            $C$DW$13        .dwtag  DW_TAG_subprogram
+     249                    .dwattr $C$DW$13, DW_AT_name("BlockLockROM_Patched")
+     250                    .dwattr $C$DW$13, DW_AT_low_pc(BlockLockROM_Patched)
+     251                    .dwattr $C$DW$13, DW_AT_high_pc(0x00)
+     252                    .dwattr $C$DW$13, DW_AT_TI_symbol_name("BlockLockROM_Patched")
+     253                    .dwattr $C$DW$13, DW_AT_external
+     254                    .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$31)
+     255                    .dwattr $C$DW$13, DW_AT_TI_begin_file("../patch.c")
+     256                    .dwattr $C$DW$13, DW_AT_TI_begin_line(0xc1)
+     257                    .dwattr $C$DW$13, DW_AT_TI_begin_column(0x07)
+     258                    .dwattr $C$DW$13, DW_AT_decl_file("../patch.c")
+     259                    .dwattr $C$DW$13, DW_AT_decl_line(0xc1)
+     260                    .dwattr $C$DW$13, DW_AT_decl_column(0x07)
+     261                    .dwattr $C$DW$13, DW_AT_TI_max_frame_size(0x02)
+     262                    .dwpsn  file "../patch.c",line 194,column 1,is_stmt,address BlockLockROM_Patched,isa 0
+     263            
+     264                    .dwfde $C$DW$CIE, BlockLockROM_Patched
+     265            $C$DW$14        .dwtag  DW_TAG_formal_parameter
+     266                    .dwattr $C$DW$14, DW_AT_name("blockNumber")
+     267                    .dwattr $C$DW$14, DW_AT_TI_symbol_name("blockNumber")
+     268                    .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$31)
+     269                    .dwattr $C$DW$14, DW_AT_location[DW_OP_reg12]
+     270            
+     271            $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     272                    .dwattr $C$DW$15, DW_AT_name("checkLock")
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    6
+
+     273                    .dwattr $C$DW$15, DW_AT_TI_symbol_name("checkLock")
+     274                    .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$28)
+     275                    .dwattr $C$DW$15, DW_AT_location[DW_OP_reg13]
+     276            
+     277            
+     278            ;*****************************************************************************
+     279            ;* FUNCTION NAME: BlockLockROM_Patched                                       *
+     280            ;*                                                                           *
+     281            ;*   Regs Modified     : SP,SR,r12                                           *
+     282            ;*   Regs Used         : SP,SR,r12                                           *
+     283            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     284            ;*****************************************************************************
+     285 000000       BlockLockROM_Patched:
+     286            ;* --------------------------------------------------------------------------*
+     287                    .dwcfi  cfa_offset, 2
+     288                    .dwcfi  save_reg_to_mem, 16, -2
+     289            ;* r12   assigned to blockNumber
+     290            $C$DW$16        .dwtag  DW_TAG_variable
+     291                    .dwattr $C$DW$16, DW_AT_name("blockNumber")
+     292                    .dwattr $C$DW$16, DW_AT_TI_symbol_name("blockNumber")
+     293                    .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$31)
+     294                    .dwattr $C$DW$16, DW_AT_location[DW_OP_reg12]
+     295            
+     296                    .dwpsn  file "../patch.c",line 195,column 2,is_stmt,isa 0
+     297 000000 B3D2          BIT.B     #1,&Firmware_System_Control_Byte+0 ; [] |195| 
+         000002 0000!
+     298 000004 2017          JNE       $C$L3                 ; [] |195| 
+     299                                                      ; [] |195| 
+     300            ;* --------------------------------------------------------------------------*
+     301 000006 903C          CMP.W     #243,r12              ; [] |195| 
+         000008 00F3 
+     302 00000a 2C14          JHS       $C$L3                 ; [] |195| 
+     303                                                      ; [] |195| 
+     304            ;* --------------------------------------------------------------------------*
+     305                    .dwpsn  file "../patch.c",line 197,column 3,is_stmt,isa 0
+     306 00000c 120A   push.w R10 
+     307                    .dwpsn  file "../patch.c",line 198,column 3,is_stmt,isa 0
+     308 00000e 4C0F   mov.w R12, R15 
+     309                    .dwpsn  file "../patch.c",line 199,column 3,is_stmt,isa 0
+     310 000010 4C0E   mov.w R12, R14 
+     311                    .dwpsn  file "../patch.c",line 200,column 3,is_stmt,isa 0
+     312 000012 503E   add.w #0xFA00, R14 
+         000014 FA00 
+     313                    .dwpsn  file "../patch.c",line 201,column 3,is_stmt,isa 0
+     314 000016 12B0   call #0x5CCC
+         000018 5CCC 
+     315                    .dwpsn  file "../patch.c",line 202,column 3,is_stmt,isa 0
+     316 00001a 4C0A   mov.w R12, R10 
+     317                    .dwpsn  file "../patch.c",line 203,column 3,is_stmt,isa 0
+     318 00001c B3E2          BIT.B     #2,&Firmware_System_Control_Byte+0 ; [] |203| 
+         00001e 0000!
+     319 000020 2003          JNE       $C$L1                 ; [] |203| 
+     320                                                      ; [] |203| 
+     321            ;* --------------------------------------------------------------------------*
+     322                    .dwpsn  file "../patch.c",line 209,column 4,is_stmt,isa 0
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    7
+
+     323 000022 503A   add.w #0xF850, R10
+         000024 F850 
+     324 000026 3C02          JMP       $C$L2                 ; [] |209| 
+     325                                                      ; [] |209| 
+     326            ;* --------------------------------------------------------------------------*
+     327 000028       $C$L1:    
+     328                    .dwpsn  file "../patch.c",line 205,column 4,is_stmt,isa 0
+     329 000028 503A   add.w #0xF840, R10
+         00002a F840 
+     330            ;* --------------------------------------------------------------------------*
+     331 00002c       $C$L2:    
+     332                    .dwpsn  file "../patch.c",line 211,column 3,is_stmt,isa 0
+     333 00002c 435E   mov.b #0x1, R14 
+     334                    .dwpsn  file "../patch.c",line 212,column 3,is_stmt,isa 0
+     335 00002e 4030   br #0x544E 
+         000030 544E 
+     336                    .dwpsn  file "../patch.c",line 213,column 5,is_stmt,isa 0
+     337 000032 3C02          JMP       $C$L4                 ; [] |213| 
+     338                                                      ; [] |213| 
+     339            ;* --------------------------------------------------------------------------*
+     340 000034       $C$L3:    
+     341                    .dwpsn  file "../patch.c",line 216,column 6,is_stmt,isa 0
+     342 000034 4030   br #0x542C 
+         000036 542C 
+     343            ;* --------------------------------------------------------------------------*
+     344 000038       $C$L4:    
+     345                    .dwpsn  file "../patch.c",line 220,column 3,is_stmt,isa 0
+     346 000038 430C          MOV.W     #0,r12                ; [] |220| 
+     347                    .dwpsn  file "../patch.c",line 222,column 1,is_stmt,isa 0
+     348            $C$DW$17        .dwtag  DW_TAG_TI_branch
+     349                    .dwattr $C$DW$17, DW_AT_low_pc(0x00)
+     350                    .dwattr $C$DW$17, DW_AT_TI_return
+     351            
+     352 00003a 4130          RET       ; [] 
+     353                    ; [] 
+     354                    .dwattr $C$DW$13, DW_AT_TI_end_file("../patch.c")
+     355                    .dwattr $C$DW$13, DW_AT_TI_end_line(0xde)
+     356                    .dwattr $C$DW$13, DW_AT_TI_end_column(0x01)
+     357                    .dwendentry
+     358                    .dwendtag $C$DW$13
+     359            
+     360            ;*****************************************************************************
+     361            ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     362            ;*****************************************************************************
+     363                    .global userCustomCommand
+     364            
+     365            ;******************************************************************************
+     366            ;* BUILD ATTRIBUTES                                                           *
+     367            ;******************************************************************************
+     368                    .battr "TI", Tag_File, 1, Tag_LPM_INFO(1)
+     369                    .battr "TI", Tag_File, 1, Tag_PORTS_INIT_INFO("012345678901ABCDEFGHIJ0000000000001000000000000
+     370                    .battr "TI", Tag_File, 1, Tag_HW_MPY32_INFO(1)
+     371                    .battr "TI", Tag_File, 1, Tag_HW_MPY_ISR_INFO(1)
+     372                    .battr "TI", Tag_File, 1, Tag_HW_MPY_INLINE_INFO(1)
+     373                    .battr "mspabi", Tag_File, 1, Tag_enum_size(3)
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    8
+
+     374            
+     375            ;******************************************************************************
+     376            ;* TYPE INFORMATION                                                           *
+     377            ;******************************************************************************
+     378            $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     379                    .dwattr $C$DW$T$2, DW_AT_name("void")
+     380            
+     381            
+     382            $C$DW$T$19      .dwtag  DW_TAG_subroutine_type
+     383                    .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     384                    .dwendtag $C$DW$T$19
+     385            
+     386            $C$DW$T$20      .dwtag  DW_TAG_pointer_type
+     387                    .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     388                    .dwattr $C$DW$T$20, DW_AT_address_class(0x10)
+     389            
+     390            $C$DW$T$21      .dwtag  DW_TAG_typedef
+     391                    .dwattr $C$DW$T$21, DW_AT_name("__SFR_FARPTR")
+     392                    .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+     393                    .dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
+     394                    .dwattr $C$DW$T$21, DW_AT_decl_file("C:/ti/ccsv6/ccs_base/msp430/include/rf430frl152h.h")
+     395                    .dwattr $C$DW$T$21, DW_AT_decl_line(0x42)
+     396                    .dwattr $C$DW$T$21, DW_AT_decl_column(0x11)
+     397            
+     398            
+     399            $C$DW$T$22      .dwtag  DW_TAG_subroutine_type
+     400                    .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+     401                    .dwendtag $C$DW$T$22
+     402            
+     403            $C$DW$T$23      .dwtag  DW_TAG_pointer_type
+     404                    .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$22)
+     405                    .dwattr $C$DW$T$23, DW_AT_address_class(0x10)
+     406            
+     407            $C$DW$T$24      .dwtag  DW_TAG_typedef
+     408                    .dwattr $C$DW$T$24, DW_AT_name("DriverFunction")
+     409                    .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+     410                    .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+     411                    .dwattr $C$DW$T$24, DW_AT_decl_file("..\patch.h")
+     412                    .dwattr $C$DW$T$24, DW_AT_decl_line(0x32)
+     413                    .dwattr $C$DW$T$24, DW_AT_decl_column(0x0f)
+     414            
+     415            $C$DW$T$25      .dwtag  DW_TAG_const_type
+     416                    .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+     417            
+     418            $C$DW$T$4       .dwtag  DW_TAG_base_type
+     419                    .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     420                    .dwattr $C$DW$T$4, DW_AT_name("bool")
+     421                    .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     422            
+     423            $C$DW$T$5       .dwtag  DW_TAG_base_type
+     424                    .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     425                    .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     426                    .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     427            
+     428            $C$DW$T$26      .dwtag  DW_TAG_typedef
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE    9
+
+     429                    .dwattr $C$DW$T$26, DW_AT_name("s08_t")
+     430                    .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$5)
+     431                    .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+     432                    .dwattr $C$DW$T$26, DW_AT_decl_file("..\types.h")
+     433                    .dwattr $C$DW$T$26, DW_AT_decl_line(0x35)
+     434                    .dwattr $C$DW$T$26, DW_AT_decl_column(0x15)
+     435            
+     436            $C$DW$T$6       .dwtag  DW_TAG_base_type
+     437                    .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     438                    .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     439                    .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     440            
+     441            $C$DW$T$28      .dwtag  DW_TAG_typedef
+     442                    .dwattr $C$DW$T$28, DW_AT_name("u08_t")
+     443                    .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$6)
+     444                    .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+     445                    .dwattr $C$DW$T$28, DW_AT_decl_file("..\types.h")
+     446                    .dwattr $C$DW$T$28, DW_AT_decl_line(0x31)
+     447                    .dwattr $C$DW$T$28, DW_AT_decl_column(0x17)
+     448            
+     449            $C$DW$18        .dwtag  DW_TAG_const_type
+     450                    .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$28)
+     451            
+     452            $C$DW$T$29      .dwtag  DW_TAG_volatile_type
+     453                    .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$18)
+     454            
+     455            $C$DW$T$7       .dwtag  DW_TAG_base_type
+     456                    .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     457                    .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     458                    .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     459            
+     460            $C$DW$T$8       .dwtag  DW_TAG_base_type
+     461                    .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     462                    .dwattr $C$DW$T$8, DW_AT_name("short")
+     463                    .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     464            
+     465            $C$DW$T$30      .dwtag  DW_TAG_typedef
+     466                    .dwattr $C$DW$T$30, DW_AT_name("s16_t")
+     467                    .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$8)
+     468                    .dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+     469                    .dwattr $C$DW$T$30, DW_AT_decl_file("..\types.h")
+     470                    .dwattr $C$DW$T$30, DW_AT_decl_line(0x36)
+     471                    .dwattr $C$DW$T$30, DW_AT_decl_column(0x16)
+     472            
+     473            $C$DW$T$9       .dwtag  DW_TAG_base_type
+     474                    .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     475                    .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     476                    .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     477            
+     478            $C$DW$T$31      .dwtag  DW_TAG_typedef
+     479                    .dwattr $C$DW$T$31, DW_AT_name("u16_t")
+     480                    .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$9)
+     481                    .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+     482                    .dwattr $C$DW$T$31, DW_AT_decl_file("..\types.h")
+     483                    .dwattr $C$DW$T$31, DW_AT_decl_line(0x32)
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE   10
+
+     484                    .dwattr $C$DW$T$31, DW_AT_decl_column(0x18)
+     485            
+     486            $C$DW$T$34      .dwtag  DW_TAG_const_type
+     487                    .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$31)
+     488            
+     489            $C$DW$T$10      .dwtag  DW_TAG_base_type
+     490                    .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     491                    .dwattr $C$DW$T$10, DW_AT_name("int")
+     492                    .dwattr $C$DW$T$10, DW_AT_byte_size(0x02)
+     493            
+     494            $C$DW$T$11      .dwtag  DW_TAG_base_type
+     495                    .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     496                    .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     497                    .dwattr $C$DW$T$11, DW_AT_byte_size(0x02)
+     498            
+     499            $C$DW$T$12      .dwtag  DW_TAG_base_type
+     500                    .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     501                    .dwattr $C$DW$T$12, DW_AT_name("long")
+     502                    .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+     503            
+     504            $C$DW$T$36      .dwtag  DW_TAG_typedef
+     505                    .dwattr $C$DW$T$36, DW_AT_name("s32_t")
+     506                    .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$12)
+     507                    .dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+     508                    .dwattr $C$DW$T$36, DW_AT_decl_file("..\types.h")
+     509                    .dwattr $C$DW$T$36, DW_AT_decl_line(0x37)
+     510                    .dwattr $C$DW$T$36, DW_AT_decl_column(0x15)
+     511            
+     512            $C$DW$T$13      .dwtag  DW_TAG_base_type
+     513                    .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     514                    .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     515                    .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+     516            
+     517            $C$DW$T$37      .dwtag  DW_TAG_typedef
+     518                    .dwattr $C$DW$T$37, DW_AT_name("u32_t")
+     519                    .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$13)
+     520                    .dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+     521                    .dwattr $C$DW$T$37, DW_AT_decl_file("..\types.h")
+     522                    .dwattr $C$DW$T$37, DW_AT_decl_line(0x33)
+     523                    .dwattr $C$DW$T$37, DW_AT_decl_column(0x17)
+     524            
+     525            $C$DW$T$14      .dwtag  DW_TAG_base_type
+     526                    .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     527                    .dwattr $C$DW$T$14, DW_AT_name("long long")
+     528                    .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     529            
+     530            $C$DW$T$15      .dwtag  DW_TAG_base_type
+     531                    .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     532                    .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     533                    .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+     534            
+     535            $C$DW$T$16      .dwtag  DW_TAG_base_type
+     536                    .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     537                    .dwattr $C$DW$T$16, DW_AT_name("float")
+     538                    .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE   11
+
+     539            
+     540            $C$DW$T$17      .dwtag  DW_TAG_base_type
+     541                    .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     542                    .dwattr $C$DW$T$17, DW_AT_name("double")
+     543                    .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+     544            
+     545            $C$DW$T$18      .dwtag  DW_TAG_base_type
+     546                    .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     547                    .dwattr $C$DW$T$18, DW_AT_name("long double")
+     548                    .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+     549            
+     550                    .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     551            
+     552            ;***************************************************************
+     553            ;* DWARF CIE ENTRIES                                           *
+     554            ;***************************************************************
+     555            
+     556            $C$DW$CIE       .dwcie 16
+     557                    .dwcfi  cfa_register, 1
+     558                    .dwcfi  cfa_offset, 0
+     559                    .dwcfi  same_value, 0
+     560                    .dwcfi  same_value, 1
+     561                    .dwcfi  undefined, 2
+     562                    .dwcfi  same_value, 3
+     563                    .dwcfi  same_value, 4
+     564                    .dwcfi  same_value, 5
+     565                    .dwcfi  same_value, 6
+     566                    .dwcfi  same_value, 7
+     567                    .dwcfi  same_value, 8
+     568                    .dwcfi  same_value, 9
+     569                    .dwcfi  same_value, 10
+     570                    .dwcfi  undefined, 11
+     571                    .dwcfi  undefined, 12
+     572                    .dwcfi  undefined, 13
+     573                    .dwcfi  undefined, 14
+     574                    .dwcfi  undefined, 15
+     575                    .dwcfi  undefined, 16
+     576                    .dwendentry
+     577            
+     578            ;***************************************************************
+     579            ;* DWARF REGISTER MAP                                          *
+     580            ;***************************************************************
+     581            
+     582            $C$DW$19        .dwtag  DW_TAG_TI_assign_register
+     583                    .dwattr $C$DW$19, DW_AT_name("PC")
+     584                    .dwattr $C$DW$19, DW_AT_location[DW_OP_reg0]
+     585            
+     586            $C$DW$20        .dwtag  DW_TAG_TI_assign_register
+     587                    .dwattr $C$DW$20, DW_AT_name("SP")
+     588                    .dwattr $C$DW$20, DW_AT_location[DW_OP_reg1]
+     589            
+     590            $C$DW$21        .dwtag  DW_TAG_TI_assign_register
+     591                    .dwattr $C$DW$21, DW_AT_name("SR")
+     592                    .dwattr $C$DW$21, DW_AT_location[DW_OP_reg2]
+     593            
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE   12
+
+     594            $C$DW$22        .dwtag  DW_TAG_TI_assign_register
+     595                    .dwattr $C$DW$22, DW_AT_name("CG")
+     596                    .dwattr $C$DW$22, DW_AT_location[DW_OP_reg3]
+     597            
+     598            $C$DW$23        .dwtag  DW_TAG_TI_assign_register
+     599                    .dwattr $C$DW$23, DW_AT_name("r4")
+     600                    .dwattr $C$DW$23, DW_AT_location[DW_OP_reg4]
+     601            
+     602            $C$DW$24        .dwtag  DW_TAG_TI_assign_register
+     603                    .dwattr $C$DW$24, DW_AT_name("r5")
+     604                    .dwattr $C$DW$24, DW_AT_location[DW_OP_reg5]
+     605            
+     606            $C$DW$25        .dwtag  DW_TAG_TI_assign_register
+     607                    .dwattr $C$DW$25, DW_AT_name("r6")
+     608                    .dwattr $C$DW$25, DW_AT_location[DW_OP_reg6]
+     609            
+     610            $C$DW$26        .dwtag  DW_TAG_TI_assign_register
+     611                    .dwattr $C$DW$26, DW_AT_name("r7")
+     612                    .dwattr $C$DW$26, DW_AT_location[DW_OP_reg7]
+     613            
+     614            $C$DW$27        .dwtag  DW_TAG_TI_assign_register
+     615                    .dwattr $C$DW$27, DW_AT_name("r8")
+     616                    .dwattr $C$DW$27, DW_AT_location[DW_OP_reg8]
+     617            
+     618            $C$DW$28        .dwtag  DW_TAG_TI_assign_register
+     619                    .dwattr $C$DW$28, DW_AT_name("r9")
+     620                    .dwattr $C$DW$28, DW_AT_location[DW_OP_reg9]
+     621            
+     622            $C$DW$29        .dwtag  DW_TAG_TI_assign_register
+     623                    .dwattr $C$DW$29, DW_AT_name("r10")
+     624                    .dwattr $C$DW$29, DW_AT_location[DW_OP_reg10]
+     625            
+     626            $C$DW$30        .dwtag  DW_TAG_TI_assign_register
+     627                    .dwattr $C$DW$30, DW_AT_name("r11")
+     628                    .dwattr $C$DW$30, DW_AT_location[DW_OP_reg11]
+     629            
+     630            $C$DW$31        .dwtag  DW_TAG_TI_assign_register
+     631                    .dwattr $C$DW$31, DW_AT_name("r12")
+     632                    .dwattr $C$DW$31, DW_AT_location[DW_OP_reg12]
+     633            
+     634            $C$DW$32        .dwtag  DW_TAG_TI_assign_register
+     635                    .dwattr $C$DW$32, DW_AT_name("r13")
+     636                    .dwattr $C$DW$32, DW_AT_location[DW_OP_reg13]
+     637            
+     638            $C$DW$33        .dwtag  DW_TAG_TI_assign_register
+     639                    .dwattr $C$DW$33, DW_AT_name("r14")
+     640                    .dwattr $C$DW$33, DW_AT_location[DW_OP_reg14]
+     641            
+     642            $C$DW$34        .dwtag  DW_TAG_TI_assign_register
+     643                    .dwattr $C$DW$34, DW_AT_name("r15")
+     644                    .dwattr $C$DW$34, DW_AT_location[DW_OP_reg15]
+     645            
+     646            $C$DW$35        .dwtag  DW_TAG_TI_assign_register
+     647                    .dwattr $C$DW$35, DW_AT_name("CIE_RETA")
+     648                    .dwattr $C$DW$35, DW_AT_location[DW_OP_reg16]
+MSP430 Assembler PC v15.12.3 Wed Nov 02 14:59:54 2016
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+C:\Users\Michael\AppData\Local\Temp\1576010                          PAGE   13
+
+     649            
+     650                    .dwendtag $C$DW$CU
+     651            
+
+No Assembly Errors, No Assembly Warnings

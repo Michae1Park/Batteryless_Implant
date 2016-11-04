@@ -1,0 +1,1 @@
+"./main.obj" "./patch.obj" "../lnk_rf430frl152h_ROM_Init.cmd" -llibc.a 
